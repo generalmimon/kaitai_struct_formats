@@ -18,15 +18,25 @@
             <% end %>
         </h2>
 
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Source files</h3>
+            </div>
+            <div class="list-group">
+                <% src_files.each { |src| %>
+                <a class="list-group-item" href="#<%= src[:filename] %>"><%= src[:filename] %></a>
+                <% } %>
+            </div>
+        </div>
+
         <% src_files.each { |src| %>
 
-        <h3><%= src[:filename] %></h3>
-
         <div class="row">
-            <div class="pull-right">
-                <p>
+            <div class="col-xs-12 lh-6">
+                <h3 class="pull-left lh-6 m-0"><span class="false-anchor" id="<%= src[:filename] %>"><%= src[:filename] %></span></h3>
+                <div class="pull-right">
                     <a href="<%= src[:path] %>" class="btn btn-success">Download <i class="fa fa-download"></i></a>
-                </p>
+                </div>
             </div>
         </div>
 
