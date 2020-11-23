@@ -19,7 +19,7 @@ meta:
   endian: le
   license: CC0-1.0
   ks-version: 0.9
-  # ks-opaque-types: true # uncomment if you provide an opaque type `bitmap` for bitmap data
+  ks-opaque-types: true # uncomment if you provide an opaque type `bitmap` for bitmap data
 doc: |
   The **BMP file format**, also known as **bitmap image file** or **device independent
   bitmap (DIB) file format** or simply a **bitmap**, is a raster graphics image file
@@ -103,12 +103,12 @@ seq:
     type: bitmap
     size-eos: true
 types:
-  bitmap:
-    doc: |
-      Replace with an opaque type if you care about the pixels.
-      You can look at an example of a JavaScript implementation: https://github.com/generalmimon/bmptool/blob/master/src/Bitmap.js
+  # bitmap:
+  #   doc: |
+  #     Replace with an opaque type if you care about the pixels.
+  #     You can look at an example of a JavaScript implementation: https://github.com/generalmimon/bmptool/blob/master/src/Bitmap.js
 
-      There is a proposal for adding bitmap data type to Kaitai Struct: https://github.com/kaitai-io/kaitai_struct/issues/188
+  #     There is a proposal for adding bitmap data type to Kaitai Struct: https://github.com/kaitai-io/kaitai_struct/issues/188
   file_header:
     -orig-id: BITMAPFILEHEADER
     doc-ref: https://docs.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader
