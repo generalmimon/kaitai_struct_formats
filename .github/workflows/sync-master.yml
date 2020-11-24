@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: hub --help
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: hub remote -v
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: hub status
+      - run: hub remote add upstream https://github.com/kaitai-io/kaitai_struct_formats.git
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
