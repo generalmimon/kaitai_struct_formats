@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: master
       - run: hub --help
       - run: hub status
-      - run: hub checkout master
       - run: hub remote add upstream https://github.com/kaitai-io/kaitai_struct_formats.git
       - run: hub pull upstream master
       - run: hub push origin master
