@@ -1,0 +1,20 @@
+name: sync-master
+
+on:
+  push:
+    branches: [ ci-sync ]
+  # schedule:
+  #   - cron: '0 13 * * 2' # https://crontab.guru/#0_13_*_*_2 "At 13:00 on Tuesday."
+  # workflow_dispatch: # on button click
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: hub --help
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: hub remote -v
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
