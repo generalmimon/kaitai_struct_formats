@@ -17,7 +17,7 @@ jobs:
       - run: hub --help
       - run: hub status
       - run: hub remote add upstream https://github.com/kaitai-io/kaitai_struct_formats.git
-      - run: hub pull upstream master
+      - run: hub pull --rebase upstream master
       - run: hub push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
