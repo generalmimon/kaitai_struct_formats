@@ -4,7 +4,7 @@ on:
   push:
     branches: [ ci-sync ]
   # schedule:
-  #   - cron: '0 13 * * 2' # https://crontab.guru/#0_13_*_*_2 "At 13:00 on Tuesday."
+  #   - cron: '0 4 * * 6' # https://crontab.guru/#0_4_*_*_6 "At 04:00 on Saturday."
   workflow_dispatch: # on button click
 
 jobs:
